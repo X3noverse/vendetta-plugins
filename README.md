@@ -1,7 +1,7 @@
-# Vendetta Plugins Template
-This repo contains a template for creating [Vendetta](https://github.com/vendetta-mod/Vendetta) plugins.
+# Vendetta Plugins
 
-# How to install?
-Paste a plugin URL into the Plugins page of Vendetta, following a basic format of:
+### HideCallButtons
 
-https://`YOUR_GITHUB_USERNAME`.github.io/`REPO_NAME`/`PLUGIN_NAME`
+``https://x3noverse.github.io/vendetta-plugins/HideCallButtons``
+
+Hides call buttons from the user popout menu
