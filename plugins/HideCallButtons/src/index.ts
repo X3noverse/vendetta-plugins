@@ -1,6 +1,5 @@
 import { findByName } from "@vendetta/metro";
 import { after } from "@vendetta/patcher";
-import { DMUserContextMenu } from "@vendetta/metro";
 
 let patches = [];
 
@@ -39,12 +38,15 @@ export default {
       })
     );
 
+    // Additional patch for direct messages
+    const DirectMessagesHeader = findByName("DirectMessagesHeader", false);
+
     patches.push(
-      after("default", DMUserContextMenu, (_, component) => {
+      after("default", DirectMessagesHeader, (_, component) => {
         const { props } = component;
         const { children } = props;
         if (children === undefined) return;
-        const buttons = children[1]?.props?.children;
+        const buttons = children[2]?.props?.children;
         if (buttons === undefined) return;
 
         delete buttons[1];
