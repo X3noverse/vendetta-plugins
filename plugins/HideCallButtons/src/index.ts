@@ -7,6 +7,7 @@ export default {
   onLoad: () => {
     const UserProfileHeader = findByName("UserProfileHeader", false);
     const UserProfileActions = findByName("UserProfileActions", false);
+    const DMUserContextMenu = findByName("DMUserContextMenu", false);
 
     patches.push(
       after("default", UserProfileHeader, (_, component) => {
