@@ -1,5 +1,6 @@
 import { findByName } from "@vendetta/metro";
 import { after } from "@vendetta/patcher";
+import { DMUserContextMenu } from "@vendetta/metro";
 
 let patches = [];
 
@@ -7,7 +8,6 @@ export default {
   onLoad: () => {
     const UserProfileHeader = findByName("UserProfileHeader", false);
     const UserProfileActions = findByName("UserProfileActions", false);
-    const DMUserContextMenu = findByName("DMUserContextMenu", false);
 
     patches.push(
       after("default", UserProfileHeader, (_, component) => {
